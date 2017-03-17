@@ -9,13 +9,7 @@ import Declarations from '../StyleSheet/Declarations';
 import includes from 'lodash/includes';
 
 function guessPlatform(): $reactors$platform {
-  if (typeof window !== 'undefined' && window.DOMError) {
-    if (window.process) {
-      return 'desktop';
-    }
-    return 'web';
-  }
-  return 'mobile';
+  return 'web';
 }
 
 export class Core {
